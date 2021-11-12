@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/projectsalesdbdbserver/databases/ProjectSalesDb",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:SqlDb",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
