@@ -26,11 +26,7 @@ namespace ProjectSales
             var connection = Configuration.GetConnectionString("SqlDb");
             services.AddDbContext<ProjectSalesContext>(options => options.UseSqlServer(connection));
 
-            //Enable CORS
-            //services.AddCors(c =>
-            //{
-            //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
-            //});
+          
 
             //JSON Serializer
             services.AddControllersWithViews().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
@@ -48,8 +44,7 @@ namespace ProjectSales
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            //Enable CORS
-            //app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+        
 
 
             if (env.IsDevelopment())
